@@ -58,6 +58,31 @@
     </div>
 
     <!--Razor View Engine - Conditional-->
-    
+
+    <div>
+        <h2> If in Razor</h2>
+
+        @{ 
+            int myVar = 5;
+        } 
+    </div>
+    <div>
+        @if (myVar == 1)
+        {
+            <h3>result is 1</h3>
+        }
+        else if (myVar == 2)
+        {
+            <h3>result is 2</h3>
+        }
+        else
+        {
+            <h3>result is another</h3>
+        }
+    </div>
+    <hr />
+    <div>
+        @(myVar == 3? "condition is ture" : "condition is false")
+    </div>
 </body>
 </html>
