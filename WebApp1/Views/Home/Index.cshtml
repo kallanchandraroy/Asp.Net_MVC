@@ -19,9 +19,45 @@
 
     </div>
 
-    <!--Razor View-->
+    <!--Razor View Engine-->
+    <div>
+        <h2>Single Line Razor View Engine</h2>
+    </div>
+    <div>
+        @DateTime.Now;
+    </div>
+    <div>
+        @(8+2)
+    </div>
 
+    <div><h2>Multiple Line Razor</h2></div>
 
+    <div>
+        @{ 
+            var a = 3;
+            var b = 5;
+            var c = 2;
+            var result = a + b + c;
 
+            var currenttime = DateTime.Now;
+            var tomorrowtime = DateTime.Now.AddDays(1);
+
+            var colorsList = new List<string>() { "Red", "Green", "Pink", "Blue" };
+        }
+    </div>
+
+    <div>
+        <label>@result</label><br />
+        <label>Current time - @currenttime</label><br />
+        <label>Tomorrow time - @tomorrowtime </label><br />
+        <label>Color List - @colorsList.FirstOrDefault()</label>
+    </div>
+    <br />
+    <div>
+        Twitter Account is - @@kallan_roy
+    </div>
+
+    <!--Razor View Engine - Conditional-->
+    
 </body>
 </html>
