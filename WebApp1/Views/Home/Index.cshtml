@@ -33,7 +33,7 @@
     <div><h2>Multiple Line Razor</h2></div>
 
     <div>
-        @{ 
+        @{
             var a = 3;
             var b = 5;
             var c = 2;
@@ -62,9 +62,9 @@
     <div>
         <h2> If in Razor</h2>
 
-        @{ 
+        @{
             int myVar = 5;
-        } 
+        }
     </div>
     <div>
         @if (myVar == 1)
@@ -83,6 +83,36 @@
     <hr />
     <div>
         @(myVar == 3? "condition is ture" : "condition is false")
+    </div>
+
+    <div><h2>helper - inline</h2></div>
+
+    <div>
+        @helper MylistHelper(string[] str)
+        {
+            <ul>
+                @foreach (var item in str)
+                {
+                    <li>@item</li>
+                }
+            </ul>
+        }
+    </div>
+
+    <div>
+        <label>Example - Name List</label>
+
+        <div>
+            @MylistHelper(new string[] { "shammi", "bithy", "trisha" })
+        </div>
+    </div>
+
+    <div>
+        <label>Example 2 - Programming Language</label>
+
+        <div>
+            @MylistHelper(new string[] { "C#", "Python", "Java" })
+        </div>
     </div>
 </body>
 </html>
